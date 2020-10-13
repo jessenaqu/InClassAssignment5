@@ -69,6 +69,13 @@ namespace InClassAssignment5
 
                 demCount += 2; 
             }
+            lblValueAfterPi.Text = ("Approximate value of Pi after " + txtEnterTerm.Text + " terms");
+            lblCalculation.Text = ("=" + valueOfPi); 
+        }
+
+        private void lblEnterTerm_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
