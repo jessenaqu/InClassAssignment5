@@ -25,52 +25,59 @@ namespace InClassAssignment5
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             //==================================
-            //        Declare variable
-            //==================================
-
-            int numLoops;
-            double valueOfPi = 0;
-            double demCount = 1;
-            bool odd = false;
-            bool even = false;
-
-            //==================================
             //  Get # of Loops from text box
             //==================================
-            numLoops = Convert.ToInt32(txtEnterTerm.Text);
-            //Insert try/catch
-
-            //==================================
-            //        Create for Loop
-            //==================================
-            for (int x = 1; x <= numLoops; x++)
+            try
             {
                 //==================================
-                //  Test if loop is odd or even 
+                //        Declare variable
                 //==================================
-                if (x % 2 == 0)
+                int numLoops;
+                double valueOfPi = 0;
+                double demCount = 1;
+                bool odd = false;
+                bool even = false;
+                numLoops = Convert.ToInt32(txtEnterTerm.Text);
+                lblError.Text = "";
+                //==================================
+                //        Create for Loop
+                //==================================
+                for (int x = 1; x <= numLoops; x++)
                 {
-                    even = true;
-                    odd = false;
-                }else
-                {
-                    odd = true;
-                    even = false; 
-                }
+                    //==================================
+                    //  Test if loop is odd or even 
+                    //==================================
+                    if (x % 2 == 0)
+                    {
+                        even = true;
+                        odd = false;
+                    }else
+                    {
+                        odd = true;
+                        even = false; 
+                    }
 
-                //Is counter odd or even
-                if (odd)
-                {
-                    valueOfPi += 4 / demCount; 
-                }else
-                {
-                    valueOfPi -= 4 / demCount; 
-                }
+                    //==================================
+                    //     Is counter odd or even
+                    //==================================
+                    if (odd)
+                    {
+                        valueOfPi += 4 / demCount; 
+                    }else
+                    {
+                        valueOfPi -= 4 / demCount; 
+                    }
 
-                demCount += 2; 
+                    demCount += 2; 
+                }
+                lblValueAfterPi.Text = ("Approximate value of Pi after " + txtEnterTerm.Text + " terms");
+                lblCalculation.Text = ("=" + valueOfPi); 
             }
-            lblValueAfterPi.Text = ("Approximate value of Pi after " + txtEnterTerm.Text + " terms");
-            lblCalculation.Text = ("=" + valueOfPi); 
+            catch (Exception ex)
+            {
+                lblError.Text = "ERROR: Use valid number";
+            }
+
         }
 
         private void lblEnterTerm_Click(object sender, EventArgs e)

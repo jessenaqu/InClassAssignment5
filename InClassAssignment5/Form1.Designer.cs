@@ -34,6 +34,7 @@
             this.btnCalculate = new System.Windows.Forms.Button();
             this.lblValueAfterPi = new System.Windows.Forms.Label();
             this.lblCalculation = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEnterTerm
@@ -56,7 +57,7 @@
             this.txtEnterTerm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEnterTerm.ForeColor = System.Drawing.SystemColors.MenuText;
             this.txtEnterTerm.Location = new System.Drawing.Point(185, 192);
-            this.txtEnterTerm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEnterTerm.Margin = new System.Windows.Forms.Padding(4);
             this.txtEnterTerm.Name = "txtEnterTerm";
             this.txtEnterTerm.Size = new System.Drawing.Size(206, 31);
             this.txtEnterTerm.TabIndex = 1;
@@ -67,7 +68,7 @@
             this.btnCalculate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculate.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnCalculate.Location = new System.Drawing.Point(209, 328);
-            this.btnCalculate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCalculate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(154, 38);
             this.btnCalculate.TabIndex = 2;
@@ -84,7 +85,7 @@
             this.lblValueAfterPi.Location = new System.Drawing.Point(420, 419);
             this.lblValueAfterPi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValueAfterPi.Name = "lblValueAfterPi";
-            this.lblValueAfterPi.Size = new System.Drawing.Size(0, 29);
+            this.lblValueAfterPi.Size = new System.Drawing.Size(0, 23);
             this.lblValueAfterPi.TabIndex = 3;
             // 
             // lblCalculation
@@ -96,8 +97,20 @@
             this.lblCalculation.Location = new System.Drawing.Point(420, 473);
             this.lblCalculation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCalculation.Name = "lblCalculation";
-            this.lblCalculation.Size = new System.Drawing.Size(0, 29);
+            this.lblCalculation.Size = new System.Drawing.Size(0, 23);
             this.lblCalculation.TabIndex = 4;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lblError.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.lblError.Location = new System.Drawing.Point(597, 67);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(69, 23);
+            this.lblError.TabIndex = 5;
+            this.lblError.Text = "label1";
             // 
             // inClassAssignment5
             // 
@@ -106,13 +119,14 @@
             this.BackgroundImage = global::InClassAssignment5.Properties.Resources.piBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblCalculation);
             this.Controls.Add(this.lblValueAfterPi);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtEnterTerm);
             this.Controls.Add(this.lblEnterTerm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "inClassAssignment5";
             this.Text = "Approximate Pi";
             this.ResumeLayout(false);
@@ -127,6 +141,7 @@
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Label lblValueAfterPi;
         private System.Windows.Forms.Label lblCalculation;
+        private System.Windows.Forms.Label lblError;
     }
 }
 
